@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</FrameLayout>
+        android:layout_marginTop="50dp"
+        android:background="@android:color/black"
+        android:padding="20dp">
+
+        <ysn.com.view.chrysanthemum.ChrysanthemumView
+            android:id="@+id/main_activity_chrysanthemum_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:cv_line_count="28" />
+    </FrameLayout>
+
+
+    <ysn.com.view.chrysanthemum.ChrysanthemumView
+        android:id="@+id/main_activity_chrysanthemum_view2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        app:cv_end_color="@android:color/transparent"
+        app:cv_line_count="28"
+        app:cv_start_color="@android:color/darker_gray" />
+</LinearLayout>
